@@ -26,7 +26,7 @@ size_t next_power_of_2(size_t x);
 bitvec * bv_new()
 {
     bitvec *b = (bitvec *) malloc(sizeof(bitvec));
-    b->vec = (uint8_t *) calloc(sizeof(uint8_t), BITVEC_BITS / 8);
+    b->vec = (uint8_t *) calloc(BITVEC_BITS / 8, sizeof(uint8_t));
     assert(b->vec != NULL);
     b->nbits = BITVEC_BITS;
     b->off = 0;
